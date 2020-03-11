@@ -1,0 +1,45 @@
+﻿
+@using UIControlTabs.UIControl
+
+<CascadingValue Value="this">
+    <section id="fancyTabWidget" class="tabs t-tabs">
+        <ul class="nav nav-tabs fancyTabs " role="tablist">
+            @foreach (FancyTabPage tabPage in Pages)
+            {
+                <li class="tab fancyTab">
+                    <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                    <a @onclick=@(() => ActivatePage(tabPage)) role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-desktop"></span><span class="hidden-xs">@tabPage.Text</span></a>
+                    <div class="whiteBlock"></div>
+                </li>
+            }
+        </ul>
+            </section>
+    @ChildContent
+</CascadingValue>
+
+@code {
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    public FancyTabPage ActivePage { get; set; }
+    List<FancyTabPage> Pages = new List<FancyTabPage>();
+
+    internal void AddPage(FancyTabPage tabPage)
+    {
+        Pages.Add(tabPage);
+        if (Pages.Count == 1)
+            ActivePage = tabPage;
+        StateHasChanged();
+    }
+
+    string GetButtonClass(FancyTabPage page)
+    {
+        return page == ActivePage ? "active" : "";
+    }
+
+    void ActivatePage(FancyTabPage page)
+    {
+        ActivePage = page;
+    }
+}

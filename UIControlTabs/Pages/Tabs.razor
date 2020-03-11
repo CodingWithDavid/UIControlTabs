@@ -1,0 +1,168 @@
+﻿@page "/tabs"
+
+@using UIControlTabs.UIControl
+
+    <div class="container">
+        <section class="tabs t-tabs fancyTabContent">
+            <ul class="nav nav-tabs fancyTabs" role="tablist">
+                <TabControl>
+                    <TabPage Text="Tab 1">
+                        <Tab5Content/>
+                    </TabPage>
+                    <TabPage Text="Tab 2">
+                        <h1>The second tab</h1>
+                    </TabPage>
+                    <TabPage Text="Tab 3">
+                        <h1>The third tab</h1>
+                    </TabPage>
+                </TabControl>
+            </ul>
+        </section>
+    </div>
+                <div class="container">
+                    <section id="fancyTabWidget" class="tabs t-tabs">
+                        <ul class="nav nav-tabs fancyTabs" role="tablist">
+                            <li class="tab fancyTab @tab0Class">
+                                <a id="tab0" @onclick='(() => GotClicked("tab0"))' role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-desktop"></span><span class="hidden-xs">Connect</span></a>
+                                <div class="whiteBlock"></div>
+                            </li>
+
+                            <li class="tab fancyTab @tab1Class">
+                                <a id="tab1" @onclick='(() => GotClicked("tab1"))' role="tab" aria-controls="tabBody1" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-firefox"></span><span class="hidden-xs">Create</span></a>
+                                <div class="whiteBlock"></div>
+                            </li>
+
+                            <li class="tab fancyTab @tab2Class">
+                                <a id="tab2" @onclick='(() => GotClicked("tab2"))' role="tab" aria-controls="tabBody2" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-envira"></span><span class="hidden-xs">Discover</span></a>
+                                <div class="whiteBlock"></div>
+                            </li>
+
+                            <li class="tab fancyTab @tab3Class">
+                                <a id="tab3" @onclick='(() => GotClicked("tab3"))' role="tab" aria-controls="tabBody3" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-mortar-board"></span><span class="hidden-xs">Align</span></a>
+                                <div class="whiteBlock"></div>
+                            </li>
+
+                            <li class="tab fancyTab @tab4Class">
+                                <a id="tab4" @onclick='(() => GotClicked("tab4"))' role="tab" aria-controls="tabBody4" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-stack-overflow"></span><span class="hidden-xs">Capture</span></a>
+                                <div class="whiteBlock"></div>
+                            </li>
+
+                            <li class="tab fancyTab @tab5Class">
+                                <a id="tab5" @onclick='(() => GotClicked("tab5"))' role="tab" aria-controls="tabBody5" aria-selected="true" data-toggle="tab" tabindex="0"><span class="fa fa-question-circle"></span><span class="hidden-xs">Order</span></a>
+                                <div class="whiteBlock"></div>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+                            <div class="tab-pane  fade active in" id="tabBody0" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
+                                <div>
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <h2>This is the content of tab one.</h2>
+                                            <p>This field is a rich HTML field with a content editor like others used in Sitefinity. It accepts images, video, tables, text, etc. Street art polaroid microdosing la croix taxidermy. Jean shorts kinfolk distillery lumbersexual pinterest XOXO semiotics. Tilde meggings asymmetrical literally pork belly, heirloom food truck YOLO. Meh echo park lyft typewriter. </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane  fade" id="tabBody1" role="tabpanel" aria-labelledby="tab1" aria-hidden="true" tabindex="0">
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <h2>This is the content of tab two.</h2>
+                                        <p>This field is a rich HTML field with a content editor like others used in Sitefinity. It accepts images, video, tables, text, etc. Street art polaroid microdosing la croix taxidermy. Jean shorts kinfolk distillery lumbersexual pinterest XOXO semiotics. Tilde meggings asymmetrical literally pork belly, heirloom food truck YOLO. Meh echo park lyft typewriter. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane  fade" id="tabBody2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2>This is the content of tab three.</h2>
+                                        <p>This field is a rich HTML field with a content editor like others used in Sitefinity. It accepts images, video, tables, text, etc. Street art polaroid microdosing la croix taxidermy. Jean shorts kinfolk distillery lumbersexual pinterest XOXO semiotics. Tilde meggings asymmetrical literally pork belly, heirloom food truck YOLO. Meh echo park lyft typewriter. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane  fade" id="tabBody3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true" tabindex="0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2>This is the content of tab four.</h2>
+                                        <p>This field is a rich HTML field with a content editor like others used in Sitefinity. It accepts images, video, tables, text, etc. Street art polaroid microdosing la croix taxidermy. Jean shorts kinfolk distillery lumbersexual pinterest XOXO semiotics. Tilde meggings asymmetrical literally pork belly, heirloom food truck YOLO. Meh echo park lyft typewriter. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane  fade" id="tabBody4" role="tabpanel" aria-labelledby="tab4" aria-hidden="true" tabindex="0">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2>This is the content of tab five.</h2>
+                                        <p>This field is a rich HTML field with a content editor like others used in Sitefinity. It accepts images, video, tables, text, etc. Street art polaroid microdosing la croix taxidermy. Jean shorts kinfolk distillery lumbersexual pinterest XOXO semiotics. Tilde meggings asymmetrical literally pork belly, heirloom food truck YOLO. Meh echo park lyft typewriter. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            @if (tab5Active)
+                            {
+                                @bodyContent
+                            }
+                        </div>
+
+                    </section>
+                </div>
+
+                @code {
+
+                    private string tab0Class = "";
+                    private string tab1Class = "";
+                    private string tab2Class = "";
+                    private string tab3Class = "";
+                    private string tab4Class = "";
+                    private string tab5Class = "";
+                    private bool tab5Active = false;
+                    private string bodyContent = "";
+
+                    private void GotClicked(string tabName)
+                    {
+                        switch (tabName)
+                        {
+                            case "tab0":
+                                {
+                                    tab0Class = "active";
+                                    break;
+                                }
+                            case "tab1":
+                                {
+                                    tab1Class = "active";
+                                    break;
+                                }
+                            case "tab2":
+                                {
+                                    tab2Class = "active";
+                                    break;
+                                }
+                            case "tab3":
+                                {
+                                    tab3Class = "active";
+                                    break;
+                                }
+                            case "tab4":
+                                {
+                                    tab4Class = "active";
+                                    break;
+                                }
+                            case "tab5":
+                                {
+                                    tab5Class = "active";
+                                    tab5Active = true;
+                                    bodyContent = "<Tab5Content/>";
+                                    break;
+                                }
+                            default:
+                                {
+                                    break;
+                                }
+                        }
+                        StateHasChanged();
+                    }
+                }

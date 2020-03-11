@@ -1,0 +1,18 @@
+﻿@page "/fancyTabs"
+
+@using UIControlTabs.UIControl
+
+<FancyTabControl>
+    <FancyTabPage Text="Tab 1" IconClass="fa fa-firefox">
+        <h1>This is the first tab</h1>
+        <Counter />
+    </FancyTabPage>
+    <FancyTabPage Text="Tab 2">
+        <h1>This is the second tab</h1>
+        <FetchData />
+    </FancyTabPage>
+    <FancyTabPage Text="Tab 3">
+        <h1>This is the third tab</h1>
+        <AboutPage />
+    </FancyTabPage>
+</FancyTabControl>
